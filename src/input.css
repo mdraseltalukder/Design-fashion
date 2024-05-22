@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 0.625rem;
+}
+.container {
+  max-width: 1440px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Schibsted Grotesk", sans-serif;
+}
+span,
+article {
+  font-family: "Lora", serif;
+}
+
+@layer base {
+  h1 {
+    @apply text-[4rem] leading-[1em] font-bold lg:text-[7.2rem] lg:leading-[7.6rem] capitalize;
+  }
+  h2 {
+    @apply text-[3.6rem]  leading-9 font-semibold lg:text-[4.8rem] lg:leading-[5.76rem] capitalize;
+  }
+  h3 {
+    @apply text-[3.2rem] leading-[4rem] font-bold capitalize;
+  }
+  h4 {
+    @apply text-[3rem] font-bold leading-[4rem] lg:text-[3.8rem] lg:leading-[4.8rem] capitalize;
+  }
+  h5 {
+    @apply text-[4.8rem] lg:text-[6.4rem] lg:leading-[7.6rem] capitalize;
+  }
+  button {
+    @apply text-[2rem] lg:text-[7.2rem] lg:leading-[7.6rem] capitalize py-2 px-5 rounded-full  hover:bg-black 
+    hover:text-white ring-2 ring-black hover:duration-1000;
+  }
+  article {
+    @apply text-[1.6rem] leading-5 lg:text-[7.2rem] lg:leading-[7.6rem] capitalize;
+  }
+
+  p {
+    @apply text-[2.4rem] leading-[3rem] lg:text-[7.2rem] lg:leading-[7.6rem] capitalize tracking-wide font-extralight;
+  }
+  strong {
+    @apply text-[2.4rem] leading-[3rem] lg:text-[7.2rem] lg:leading-[7.6rem] capitalize tracking-wide;
+  }
+  .lora {
+    @apply text-[2rem] leading-6 lg:text-[2.4rem] lg:leading-[2.8rem] capitalize;
+  }
+}
+@layer components {
+  body {
+    @apply px-10;
+  }
+  header {
+    @apply flex items-center justify-between mt-10 mb-20;
+  }
+  .header-sec {
+    @apply flex items-center;
+  }
+  .clock-icon {
+    @apply text-[4rem];
+  }
+  .hamburger {
+    @apply text-4xl text-white bg-black p-3 rounded-full;
+  }
+
+  /* studio */
+  .studio-text {
+    @apply flex flex-col gap-10 items-start;
+  }
+  .studio-text h1 {
+    @apply font-black;
+  }
+  .studio {
+    @apply flex flex-col gap-10;
+  }
+  .studio article {
+    @apply text-[4rem] leading-[50px]  lg:text-[7.2rem] lg:leading-[7.6rem]  font-extralight lowercase inline-block;
+  }
+  /* .studio-info {
+    @apply flex flex-col;
+  } */
+  .studio-icon span {
+    @apply text-3xl text-white  p-3 rounded-full bg-black;
+  }
+  .studio-info {
+    @apply flex flex-col gap-[4rem] items-center;
+  }
+  .studio-icon {
+    @apply flex  gap-7;
+  }
+  .btn {
+    @apply hover:bg-transparent hover:text-black;
+  }
+  /* service */
+  .service-text {
+    @apply flex flex-col  gap-10  items-start;
+  }
+  .service-sec {
+    @apply flex flex-col gap-[5rem] pb-40  mb-10;
+  }
+  /* work */
+  .work-sec {
+    @apply flex flex-col gap-14 pb-24;
+  }
+  .work-text {
+    @apply flex flex-col gap-10;
+  }
+  .work-text h1 {
+    @apply font-semibold;
+  }
+  .work-btn {
+    @apply flex gap-5;
+  }
+  .wok-btn2 {
+    @apply text-center m-auto;
+  }
+  .work-btn button {
+    @apply text-[14px];
+  }
+  /* testimonial */
+  .testimonial-sec {
+    @apply flex flex-col gap-10 py-44;
+  }
+  .testimonial-sec h4 {
+    @apply pt-36 font-bold;
+  }
+  .testimonial-info {
+    @apply flex gap-7;
+  }
+  .testimonial-text {
+    @apply flex flex-col gap-5;
+  }
+  .testimonial-img {
+    @apply w-28 rounded-full;
+  }
+  /* career  */
+  .career-sec {
+    @apply flex flex-col gap-12 py-36;
+  }
+  .career-info {
+    @apply flex flex-col items-center gap-12;
+  }
+  .career-text {
+    @apply flex flex-col gap-10 items-center;
+  }
+  /* blog  */
+  .blog-sec {
+    @apply flex flex-col gap-9 py-36;
+  }
+  .blog {
+    @apply flex flex-col gap-14;
+  }
+
+  /* contact  */
+  .contact-sec {
+    @apply flex flex-col gap-20;
+  }
+  .contact {
+    @apply flex flex-col gap-12;
+  }
+  .contact button {
+    @apply bg-black text-white;
+  }
+  footer {
+    @apply py-36;
+  }
+  .footer-sec {
+    @apply flex flex-col gap-12;
+  }
+  .footer-sec a {
+    @apply text-[1.6rem] leading-5 lg:text-[7.2rem] lg:leading-[7.6rem] capitalize;
+  }
+}
