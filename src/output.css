@@ -532,8 +532,12 @@ button:hover {
 
 @media (min-width: 1024px) {
   button {
-    font-size: 7.2rem;
-    line-height: 7.6rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 3rem;
+    line-height: 3.6rem;
   }
 }
 
@@ -545,7 +549,7 @@ article {
 
 @media (min-width: 1024px) {
   article {
-    font-size: 7.2rem;
+    font-size: 2.8rem;
     line-height: 7.6rem;
   }
 }
@@ -560,7 +564,7 @@ p {
 
 @media (min-width: 1024px) {
   p {
-    font-size: 7.2rem;
+    font-size: 3rem;
     line-height: 7.6rem;
   }
 }
@@ -574,7 +578,7 @@ strong {
 
 @media (min-width: 1024px) {
   strong {
-    font-size: 7.2rem;
+    font-size: 3rem;
     line-height: 7.6rem;
   }
 }
@@ -754,6 +758,41 @@ header {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.nav {
+  display: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    line-height: 7rem;
+  }
+}
+
+nav a:hover {
+  text-decoration-color: #000;
+}
+
+.nav-btn {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav button {
+  font-size: 2rem;
+}
+
 /* studio */
 
 .studio-text {
@@ -765,6 +804,12 @@ header {
 
 .studio-text h1 {
   font-weight: 900;
+}
+
+@media (min-width: 1024px) {
+  .studio-text h1 {
+    max-width: 60%;
+  }
 }
 
 .studio {
@@ -821,6 +866,25 @@ header {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+/* galary */
+
+.galary-sec {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.75rem;
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.galary-sec img {
+  width: 23%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 /* service */
 
 .service-text {
@@ -853,6 +917,12 @@ header {
   gap: 2.5rem;
 }
 
+@media (min-width: 1024px) {
+  .work-text {
+    align-items: center;
+  }
+}
+
 .work-text h1 {
   font-weight: 600;
 }
@@ -862,8 +932,20 @@ header {
   gap: 1.25rem;
 }
 
+@media (min-width: 1024px) {
+  .work-btn {
+    margin-bottom: 3rem;
+  }
+}
+
 .work-btn button {
   font-size: 14px;
+}
+
+@media (min-width: 1024px) {
+  .work-btn button {
+    width: 100%;
+  }
 }
 
 /* testimonial */
@@ -883,16 +965,17 @@ header {
 
 .testimonial-info {
   display: flex;
+  align-items: center;
   gap: 1.75rem;
 }
 
 .testimonial-text {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
 }
 
 .testimonial-img {
+  height: 7rem;
   width: 7rem;
   border-radius: 9999px;
 }
@@ -963,22 +1046,36 @@ footer {
   padding-bottom: 9rem;
 }
 
-.footer-sec {
+.footer {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.footer-sec a {
+@media (min-width: 1024px) {
+  .footer {
+    flex-direction: row;
+  }
+}
+
+.footer a,
+  .footer-sec a {
   font-size: 1.6rem;
   text-transform: capitalize;
   line-height: 1.25rem;
 }
 
 @media (min-width: 1024px) {
+  .footer a,
   .footer-sec a {
-    font-size: 7.2rem;
+    font-size: 2.8rem;
     line-height: 7.6rem;
+  }
+
+  .footer-sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -996,6 +1093,11 @@ html {
 
 .container {
   max-width: 1440px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
 }
 
 h1,

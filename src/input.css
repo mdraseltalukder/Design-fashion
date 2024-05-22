@@ -7,6 +7,10 @@ html {
 }
 .container {
   max-width: 1440px;
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
 }
 h1,
 h2,
@@ -39,18 +43,18 @@ article {
     @apply text-[4.8rem] lg:text-[6.4rem] lg:leading-[7.6rem] capitalize;
   }
   button {
-    @apply text-[2rem] lg:text-[7.2rem] lg:leading-[7.6rem] capitalize py-2 px-5 rounded-full  hover:bg-black 
+    @apply text-[2rem] lg:text-[3rem] lg:leading-[3.6rem] capitalize py-2 px-5 lg:px-10 lg:py-3 rounded-full  hover:bg-black 
     hover:text-white ring-2 ring-black hover:duration-1000;
   }
   article {
-    @apply text-[1.6rem] leading-5 lg:text-[7.2rem] lg:leading-[7.6rem] capitalize;
+    @apply text-[1.6rem] leading-5 lg:text-[2.8rem] lg:leading-[7.6rem] capitalize;
   }
 
   p {
-    @apply text-[2.4rem] leading-[3rem] lg:text-[7.2rem] lg:leading-[7.6rem] capitalize tracking-wide font-extralight;
+    @apply text-[2.4rem] leading-[3rem] lg:text-[3rem] lg:leading-[7.6rem] capitalize tracking-wide font-extralight;
   }
   strong {
-    @apply text-[2.4rem] leading-[3rem] lg:text-[7.2rem] lg:leading-[7.6rem] capitalize tracking-wide;
+    @apply text-[2.4rem] leading-[3rem] lg:text-[3rem] lg:leading-[7.6rem] capitalize tracking-wide;
   }
   .lora {
     @apply text-[2rem] leading-6 lg:text-[2.4rem] lg:leading-[2.8rem] capitalize;
@@ -70,7 +74,19 @@ article {
     @apply text-[4rem];
   }
   .hamburger {
-    @apply text-4xl text-white bg-black p-3 rounded-full;
+    @apply text-4xl text-white bg-black p-3 rounded-full lg:hidden;
+  }
+  .nav {
+    @apply hidden lg:visible lg:flex lg:items-center lg:gap-16 text-[1.8rem] font-bold lg:leading-[7rem];
+  }
+  nav a {
+    @apply hover:decoration-black;
+  }
+  .nav-btn {
+    @apply flex gap-5;
+  }
+  .nav button {
+    @apply text-[2rem];
   }
 
   /* studio */
@@ -78,7 +94,7 @@ article {
     @apply flex flex-col gap-10 items-start;
   }
   .studio-text h1 {
-    @apply font-black;
+    @apply font-black lg:max-w-[60%];
   }
   .studio {
     @apply flex flex-col gap-10;
@@ -101,6 +117,13 @@ article {
   .btn {
     @apply hover:bg-transparent hover:text-black;
   }
+  /* galary */
+  .galary-sec {
+    @apply flex gap-7 py-36 items-center justify-start px-0;
+  }
+  .galary-sec img {
+    @apply w-[23%] px-0;
+  }
   /* service */
   .service-text {
     @apply flex flex-col  gap-10  items-start;
@@ -110,22 +133,22 @@ article {
   }
   /* work */
   .work-sec {
-    @apply flex flex-col gap-14 pb-24;
+    @apply flex flex-col  gap-14 pb-24;
   }
   .work-text {
-    @apply flex flex-col gap-10;
+    @apply flex flex-col gap-10 lg:items-center;
   }
   .work-text h1 {
     @apply font-semibold;
   }
   .work-btn {
-    @apply flex gap-5;
+    @apply flex gap-5 lg:mb-[3rem];
   }
   .wok-btn2 {
     @apply text-center m-auto;
   }
   .work-btn button {
-    @apply text-[14px];
+    @apply text-[14px] lg:w-[100%];
   }
   /* testimonial */
   .testimonial-sec {
@@ -135,13 +158,13 @@ article {
     @apply pt-36 font-bold;
   }
   .testimonial-info {
-    @apply flex gap-7;
+    @apply flex gap-7 items-center;
   }
   .testimonial-text {
-    @apply flex flex-col gap-5;
+    @apply flex flex-col;
   }
   .testimonial-img {
-    @apply w-28 rounded-full;
+    @apply w-28 h-28 rounded-full;
   }
   /* career  */
   .career-sec {
@@ -155,7 +178,7 @@ article {
   }
   /* blog  */
   .blog-sec {
-    @apply flex flex-col gap-9 py-36;
+    @apply flex flex-col  gap-9 py-36;
   }
   .blog {
     @apply flex flex-col gap-14;
@@ -174,10 +197,14 @@ article {
   footer {
     @apply py-36;
   }
-  .footer-sec {
-    @apply flex flex-col gap-12;
+  .footer {
+    @apply flex flex-col gap-12 lg:flex-row;
   }
+  .footer a,
   .footer-sec a {
-    @apply text-[1.6rem] leading-5 lg:text-[7.2rem] lg:leading-[7.6rem] capitalize;
+    @apply text-[1.6rem] leading-5 lg:text-[2.8rem] lg:leading-[7.6rem] capitalize;
+  }
+  .footer-sec {
+    @apply lg:flex  lg:justify-between lg:items-center;
   }
 }
