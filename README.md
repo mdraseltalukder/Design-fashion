@@ -1,3 +1,4 @@
+
 **
 
 ## project name: Design  studio.
@@ -13,4 +14,5 @@ this website is about  Strategy & Design Studio
  - tailwind css
 
 snap: 
-https://github.com/mdraseltalukder/Design-fashion/blob/main/screencapture-design-fashion-five-vercel-app-2024-05-23-00_44_58.png
+
+![enter image description here](https://github.com/mdraseltalukder/Design-fashion/blob/main/screencapture-127-0-0-1-5500-2024-05-23-13_53_20.png?raw=true)
