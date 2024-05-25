@@ -523,6 +523,9 @@ button {
 }
 
 button:hover {
+  --tw-translate-x: -.5rem;
+  --tw-scale-x: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -536,7 +539,7 @@ button:hover {
     padding-right: 2.5rem;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-    font-size: 3rem;
+    font-size: 2.6rem;
     line-height: 3.6rem;
   }
 }
@@ -558,14 +561,14 @@ p {
   font-size: 2.4rem;
   font-weight: 200;
   text-transform: capitalize;
-  line-height: 3rem;
+  line-height: 2.8rem;
   letter-spacing: 0.025em;
 }
 
 @media (min-width: 1024px) {
   p {
     font-size: 3rem;
-    line-height: 7.6rem;
+    line-height: 5.6rem;
   }
 }
 
@@ -738,9 +741,13 @@ header {
   justify-content: space-between;
 }
 
-.header-sec {
+.header-sec a {
   display: flex;
   align-items: center;
+}
+
+.header-sec a:hover {
+  text-decoration-color: #fff;
 }
 
 .clock-icon {
@@ -855,6 +862,10 @@ nav a:hover {
   gap: 4rem;
 }
 
+.studio-info .btn {
+  width: 100%;
+}
+
 .studio-icon {
   display: flex;
   gap: 1.75rem;
@@ -871,7 +882,7 @@ nav a:hover {
 .galary-sec {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 1.75rem;
   padding-top: 9rem;
   padding-bottom: 9rem;
@@ -883,6 +894,52 @@ nav a:hover {
   width: 23%;
   padding-left: 0px;
   padding-right: 0px;
+}
+
+/* cliend-sec */
+
+.client-sec {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .client-sec {
+    text-align: left;
+  }
+}
+
+.client-info {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  .client-info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.client-info img {
+  display: block;
+  max-width: 30%;
+}
+
+@media (min-width: 1024px) {
+  .client-info img {
+    width: 17%;
+  }
 }
 
 /* service */
@@ -899,7 +956,13 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
   padding-bottom: 10rem;
+}
+
+.hamburger {
 }
 
 /* work */
@@ -908,7 +971,29 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
-  padding-bottom: 6rem;
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  padding-bottom: 9rem;
+  padding-top: 2.5rem;
+}
+
+.work-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+@media (min-width: 1024px) {
+  .work-info-2 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .work-info-2 .work-text img {
+    height: 340px;
+    width: 100%;
+  }
 }
 
 .work-text {
@@ -917,10 +1002,8 @@ nav a:hover {
   gap: 2.5rem;
 }
 
-@media (min-width: 1024px) {
-  .work-text {
-    align-items: center;
-  }
+.work-text img {
+  width: 100%;
 }
 
 .work-text h1 {
@@ -942,10 +1025,8 @@ nav a:hover {
   font-size: 14px;
 }
 
-@media (min-width: 1024px) {
-  .work-btn button {
-    width: 100%;
-  }
+.work-btn2 button {
+  width: 100%;
 }
 
 /* testimonial */
@@ -954,8 +1035,11 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  padding-top: 11rem;
-  padding-bottom: 11rem;
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  padding-bottom: 9rem;
+  padding-top: 2.5rem;
 }
 
 .testimonial-sec h4 {
@@ -986,8 +1070,11 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding-top: 9rem;
-  padding-bottom: 9rem;
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  padding-bottom: 7rem;
+  padding-top: 2.5rem;
 }
 
 .career-info {
@@ -995,6 +1082,13 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .career-info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .career-text {
@@ -1009,15 +1103,35 @@ nav a:hover {
 .blog-sec {
   display: flex;
   flex-direction: column;
-  gap: 2.25rem;
+  gap: 3.5rem;
+  padding-top: 2.5rem;
+}
+
+.blog-sec img {
+  height: 480px;
+  width: 100%;
+}
+
+.blog-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
   padding-top: 9rem;
   padding-bottom: 9rem;
 }
 
-.blog {
+@media (min-width: 768px) {
+  .blog-info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.blog,
+  .blog-text {
   display: flex;
   flex-direction: column;
-  gap: 3.5rem;
+  gap: 2.25rem;
 }
 
 /* contact  */
@@ -1028,10 +1142,36 @@ nav a:hover {
   gap: 5rem;
 }
 
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .contact-info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-info .contact {
+    margin: auto;
+    box-sizing: border-box;
+    width: 33.333333%;
+  }
+}
+
 .contact {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    gap: 1.25rem;
+  }
 }
 
 .contact button {
@@ -1041,9 +1181,11 @@ nav a:hover {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+/* footer */
+
 footer {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .footer {
@@ -1068,7 +1210,7 @@ footer {
 @media (min-width: 1024px) {
   .footer a,
   .footer-sec a {
-    font-size: 2.8rem;
+    font-size: 1.8rem;
     line-height: 7.6rem;
   }
 
@@ -1113,4 +1255,8 @@ p {
 span,
 article {
   font-family: "Lora", serif;
+}
+
+a:hover {
+  text-decoration: underline;
 }

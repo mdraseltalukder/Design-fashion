@@ -25,6 +25,9 @@ span,
 article {
   font-family: "Lora", serif;
 }
+a:hover {
+  text-decoration: underline;
+}
 
 @layer base {
   h1 {
@@ -43,7 +46,7 @@ article {
     @apply text-[4.8rem] lg:text-[6.4rem] lg:leading-[7.6rem] capitalize;
   }
   button {
-    @apply text-[2rem] lg:text-[3rem] lg:leading-[3.6rem] capitalize py-2 px-5 lg:px-10 lg:py-3 rounded-full  hover:bg-black 
+    @apply text-[2rem] lg:text-[2.6rem] lg:leading-[3.6rem] capitalize py-2 px-5 lg:px-10 lg:py-3 rounded-full  hover:bg-black hover:translate-x-[-.5rem] hover:scale-x-105
     hover:text-white ring-2 ring-black hover:duration-1000;
   }
   article {
@@ -51,7 +54,7 @@ article {
   }
 
   p {
-    @apply text-[2.4rem] leading-[3rem] lg:text-[3rem] lg:leading-[7.6rem] capitalize tracking-wide font-extralight;
+    @apply text-[2.4rem] leading-[2.8rem] lg:text-[3rem] lg:leading-[5.6rem] capitalize tracking-wide font-extralight;
   }
   strong {
     @apply text-[2.4rem] leading-[3rem] lg:text-[3rem] lg:leading-[7.6rem] capitalize tracking-wide;
@@ -67,8 +70,8 @@ article {
   header {
     @apply flex items-center justify-between mt-10 mb-20;
   }
-  .header-sec {
-    @apply flex items-center;
+  .header-sec a {
+    @apply flex items-center hover:decoration-white;
   }
   .clock-icon {
     @apply text-[4rem];
@@ -111,6 +114,9 @@ article {
   .studio-info {
     @apply flex flex-col gap-[4rem] items-center;
   }
+  .studio-info .btn {
+    @apply w-full;
+  }
   .studio-icon {
     @apply flex  gap-7;
   }
@@ -119,24 +125,50 @@ article {
   }
   /* galary */
   .galary-sec {
-    @apply flex gap-7 py-36 items-center justify-start px-0;
+    @apply flex gap-7 py-36 items-center justify-between px-0;
   }
   .galary-sec img {
     @apply w-[23%] px-0;
+  }
+  /* cliend-sec */
+  .client-sec {
+    @apply flex flex-col gap-16 text-center lg:text-left m-auto pb-10 border-b border-b-2 border-black;
+  }
+  .client-info {
+    @apply flex flex-col items-center gap-7  lg:flex-row lg:justify-between m-auto;
+  }
+  .client-info img {
+    @apply lg:w-[17%] max-w-[30%] block;
   }
   /* service */
   .service-text {
     @apply flex flex-col  gap-10  items-start;
   }
   .service-sec {
-    @apply flex flex-col gap-[5rem] pb-40  mb-10;
+    @apply flex flex-col gap-[5rem] pb-40  mb-10 border-b border-b-2 border-black;
   }
+
+  .hamburger {
+  }
+
   /* work */
   .work-sec {
-    @apply flex flex-col  gap-14 pb-24;
+    @apply flex flex-col   gap-14 pb-36 pt-10 border-b border-b-2 border-black;
+  }
+  .work-info {
+    @apply flex flex-col  gap-14;
+  }
+  .work-info-2 {
+    @apply lg:flex lg:flex-row;
+  }
+  .work-info-2 .work-text img {
+    @apply lg:h-[340px] lg:w-full;
   }
   .work-text {
-    @apply flex flex-col gap-10 lg:items-center;
+    @apply flex flex-col gap-10;
+  }
+  .work-text img {
+    @apply w-full;
   }
   .work-text h1 {
     @apply font-semibold;
@@ -148,11 +180,14 @@ article {
     @apply text-center m-auto;
   }
   .work-btn button {
-    @apply text-[14px] lg:w-[100%];
+    @apply text-[14px];
+  }
+  .work-btn2 button {
+    @apply w-full;
   }
   /* testimonial */
   .testimonial-sec {
-    @apply flex flex-col gap-10 py-44;
+    @apply flex flex-col gap-10 pb-36 pt-10 border-b border-b-2 border-black;
   }
   .testimonial-sec h4 {
     @apply pt-36 font-bold;
@@ -168,41 +203,55 @@ article {
   }
   /* career  */
   .career-sec {
-    @apply flex flex-col gap-12 py-36;
+    @apply flex flex-col gap-12 pb-28 pt-10 border-b border-b-2 border-black;
   }
   .career-info {
-    @apply flex flex-col items-center gap-12;
+    @apply flex flex-col md:flex-row md:justify-between items-center gap-12;
   }
   .career-text {
     @apply flex flex-col gap-10 items-center;
   }
   /* blog  */
   .blog-sec {
-    @apply flex flex-col  gap-9 py-36;
+    @apply flex flex-col gap-14  pt-10;
   }
-  .blog {
-    @apply flex flex-col gap-14;
+  .blog-sec img {
+    @apply h-[480px] w-full;
+  }
+  .blog-info {
+    @apply flex flex-col  gap-14 py-36 md:flex-row md:justify-between;
+  }
+  .blog,
+  .blog-text {
+    @apply flex flex-col gap-9;
   }
 
   /* contact  */
   .contact-sec {
     @apply flex flex-col gap-20;
   }
+  .contact-info {
+    @apply flex flex-col gap-20 lg:flex-row lg:justify-between;
+  }
+  .contact-info .contact {
+    @apply lg:w-1/3 lg:m-auto lg:box-border;
+  }
   .contact {
-    @apply flex flex-col gap-12;
+    @apply flex flex-col gap-12 lg:gap-5 items-start;
   }
   .contact button {
     @apply bg-black text-white;
   }
+  /* footer */
   footer {
-    @apply py-36;
+    @apply py-20;
   }
   .footer {
     @apply flex flex-col gap-12 lg:flex-row;
   }
   .footer a,
   .footer-sec a {
-    @apply text-[1.6rem] leading-5 lg:text-[2.8rem] lg:leading-[7.6rem] capitalize;
+    @apply text-[1.6rem] leading-5 lg:text-[1.8rem] lg:leading-[7.6rem] capitalize;
   }
   .footer-sec {
     @apply lg:flex  lg:justify-between lg:items-center;
